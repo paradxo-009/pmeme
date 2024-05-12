@@ -8,7 +8,9 @@ app.use(express.json());
 
 const MEME_API_URL = 'https://programming-memes-images.p.rapidapi.com/v1/memes';
 const API_KEY = 'b38444b5b7mshc6ce6bcd5c9e446p154fa1jsn7bbcfb025b3b';
-
+app.get('/', (req, res) => {
+  res.send('programming meme');
+});
 app.get('/meme', async (req, res) => {
   try {
     const options = {
